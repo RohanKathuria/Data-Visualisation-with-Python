@@ -1,0 +1,22 @@
+import matplotlib
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set_style("darkgrid")
+matplotlib.rcParams['font.size'] = 14
+matplotlib.rcParams['figure.figsize'] = (9, 5)
+matplotlib.rcParams['figure.facecolor'] = '#00000000'
+
+#name of x axis = range(#x, #y)
+#variable 1 = [#Enter all values here]
+#variable 2 = [#Enter all values here]
+
+plt.plot(#First line axes, #name 'b-x', linewidth=4, markersize=12, markeredgewidth=4, markeredgecolor='navy')
+
+plt.plot(#second like axes, #name, 'r--o', linewidth=4, markersize=12,);
+
+plt.title('#Title of choice')
+
+plt.legend(['#2 line labels of your choice'])
+
+plt.xlabel('#X axis label'); plt.ylabel('#Y axis label');
