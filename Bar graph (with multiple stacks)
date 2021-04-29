@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+
+labels = ['#1', '#2', '#3', '#4', '#5']
+#Variable1_means = [#Enter values here]
+#Variable2_means = [#Enter values here]
+#Varible1_std = [#Enter values here]
+#Varible2_std = [#Enter values here]
+width = 0.35
+
+fig, ax = plt.subplots()
+
+ax.bar(labels, #V1_means, width, yerr=#V1_std, label='#Of choice')
+ax.bar(labels, #V2_means, width, yerr=#V2_std, bottom=#V1_means, #This puts V1 below V2
+       label='#Of choice')
+
+ax.set_ylabel('#Choice')
+ax.set_title('#Title of choice')
+ax.legend()
+
+plt.show()
