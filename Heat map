@@ -1,0 +1,10 @@
+flights = sns.load_dataset("#Name of dataset")
+
+plt.title("#Title of your choice")
+
+sns.heatmap(#name, 
+            fmt="d", 
+            annot=True, 
+            linewidths=.5, 
+            cmap='Blues',#Can choose another color as well
+            annot_kws={"fontsize":13});
