@@ -1,0 +1,11 @@
+import matplotlib.pyplot as plt
+
+data = {'#Variable 1': #Enter value here, '#Variable 2': #Enter value here, '#Variable 3': #Enter value here, '#Variable 4': #Enter value here} #Can add more variables, just remeber to increase the size of the graph so all variables can be seen cleraly
+names = list(data.keys())
+values = list(data.values())
+
+fig, axs = plt.subplots(1, 3, figsize=(9, 3), sharey=True)
+axs[0].bar(names, values)
+axs[1].scatter(names, values)
+axs[2].plot(names, values)
+fig.suptitle('Categorical Plotting')
