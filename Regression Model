@@ -1,0 +1,9 @@
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.set_theme(color_codes=True)
+
+#Choice = sns.load_dataset("#Dataset of your choice")
+
+sns.regplot(x="#X-axis label", y="#Y-axis label", data=#Choice);
