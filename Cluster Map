@@ -1,0 +1,25 @@
+import pandas as pd
+import seaborn as sns
+sns.set_theme()
+
+df = sns.load_dataset("#Dataset Name", header=[0, 1, 2], index_col=0)
+
+#x-axis values = [1, 5, 6, 7, 8, 12, 13, 17]
+used_columns = (df.columns.get_level_values("#Name")
+                          .astype(int)
+                          .isin(#X-axis))
+df = df.loc[:, used_columns]
+
+#Variable from data = sns.husl_palette(8, s=.45)
+#Variable from data = dict(zip(map(str, #X-axis), network_pal))
+
+#Name = df.columns.get_level_values("#Name")
+#Variable from data set = pd.Series(#Name, index=df.columns).map(#Variable from dataset)
+
+g = sns.clustermap(df.corr(), center=0, cmap="vlag",
+                   row_colors=#Variable, col_colors=#Same variable,
+                   dendrogram_ratio=(.1, .2),
+                   cbar_pos=(.02, .32, .03, .2),
+                   linewidths=.75, figsize=(12, 13))
+
+g.ax_row_dendrogram.remove()
