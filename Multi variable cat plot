@@ -1,0 +1,9 @@
+import seaborn as sns
+sns.set_theme(style="whitegrid")
+
+df = sns.load_dataset("#Dataset name")
+
+g = sns.catplot(x="x-axis label", y="y-axis label", hue="#Variable1", col="#Variable2",
+                capsize=.2, palette="YlGnBu_d", height=6, aspect=.75,
+                kind="point", data=df) #Kind point will allow you to mark points on the graph, if you don't want points, remove this line
+g.despine(left=True)
