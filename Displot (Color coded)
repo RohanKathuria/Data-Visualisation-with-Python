@@ -1,0 +1,12 @@
+mport seaborn as sns
+sns.set_theme(style="whitegrid")
+
+#Choice = sns.load_dataset("#Dataset of your choice")
+
+sns.displot(
+    data=#Choice,
+    x="#Variable1", hue="#Your choice",
+    kind="kde", height=6, #KDE is Kernel Density Estimate
+    multiple="fill", clip=(0, None),
+    palette="ch:rot=-.25,hue=1,light=.75",
+)
