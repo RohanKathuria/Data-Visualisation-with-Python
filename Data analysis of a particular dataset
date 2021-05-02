@@ -1,0 +1,52 @@
+#Analysis on the Planets dataset found on Github: https://github.com/mwaskom/seaborn-data/blob/master/planets.csv
+import pandas as pd 
+import numpy as np
+import seaborn as sns
+import matplotlib
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+sns.set_style('darkgrid')
+matplotlib.rcParams['font.size'] = 14
+matplotlib.rcParams['figure.figsize'] = (9, 5)
+matplotlib.rcParams['figure.facecolor'] = '#00000000'
+
+#Question 1 - What is the relationship between mass and distance? (Using a line graph)
+planets = sns.load_dataset("planets")
+planets.head()
+sns.lineplot(data=planets, x="mass", y="distance")
+
+#Question 2 - What is the relationship between mass and orbital periods? (Using a scatter plot)
+planets = sns.load_dataset("planets")
+planets.head()
+sns.scatterplot(data=planets, x="mass", y="orbital_period")
+
+#Question 3 - What are the 4 most common methods that have been used to detect new planets? (Using a pie chart)
+planets = sns.load_dataset("planets")
+planets.head()
+data = planets.groupby("method").sum()
+
+data
+
+#Plotting the top 4 methods
+y = np.array([50, 27, 952, 776])
+mylabels = ["Imaging", "Microlensing", "Radial velocity", "Transit"]
+
+plt.pie(y, labels = mylabels)
+plt.show() 
+
+#Question 4 - Which years had the largest number of planet discoveries? (Using a bar graph)
+planets = sns.load_dataset('planets')
+planets.head()
+g = sns.factorplot("year", data=planets, aspect=2,
+                    kind="count", color='steelblue')
+g.set_xticklabels(step=5)
+
+#Question 5 - How did the method of discovery differ over the range of years of 2001-2015? (Using a bar graph that shows years, number of discoveries and the method of the discoveries)
+planets = sns.load_dataset('planets')
+planets.head()
+g = sns.factorplot("year", data=planets, aspect=4.0, kind='count',
+                    hue='method', order=range(2001, 2015))
+g.set_ylabels('Number of Planets Discovered')
+
+#Based on this analysis, I have answered all 5 questions. 
