@@ -1,0 +1,29 @@
+#For 2 columns - With column 1 being col1 and column 2 being col2 - Comparing whether the values in col1<col2, giving response as either true or false
+import pandas as pd
+df['Comparioson'] = df['col1'] < df['col2']
+df
+
+#For 2 columns - With column 1 being col1 and column 2 being col2 - Comparing whether the values in col1>col2, giving response as either true or false
+import pandas as pd
+df['Comparioson'] = df['col1'] > df['col2']
+df
+
+#For 2 columns - With column 1 being col1 and column 2 being col2 - Comparing whether the values in col1 are equal to col2, giving response as either true or false
+import pandas as pd
+df['Comparioson'] = df['col1'] == df['col2']
+df
+
+#For 2 columns - With column 1 being col1 and column 2 being col2 - Comparing whether the values in col1 are not equal to col2, giving response as either true or false
+import pandas as pd
+df['Comparioson'] = df['col1'] != df['col2']
+df
+
+#For 2 columns - With column 1 being col1 and column 2 being col2 - Comparing whether the values in col1 are greater than equal to col2, giving response as either true or false
+import pandas as pd
+df['Comparioson'] = df['col1'] >= df['col2']
+df
+
+#For 2 columns - With column 1 being col1 and column 2 being col2 - Comparing whether the values in col1 are less than equal to col2, giving response as either true or false
+import pandas as pd
+df['Comparioson'] = df['col1'] <= df['col2']
+df
