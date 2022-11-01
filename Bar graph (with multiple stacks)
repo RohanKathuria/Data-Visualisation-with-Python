@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 labels = ['#1', '#2', '#3', '#4', '#5']
 #Variable1_means = [#Enter values here]
 #Variable2_means = [#Enter values here]
-#Varible1_std = [#Enter values here]
+#Varible1_std = [#Enter values here] 
 #Varible2_std = [#Enter values here]
 width = 0.35
 
